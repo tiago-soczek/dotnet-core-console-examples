@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.IO;
 using System;
+using Contoso.Shared;
 
 namespace Contoso.JustConfig
 {
@@ -12,7 +13,7 @@ namespace Contoso.JustConfig
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json");
 
-            IConfigurationRoot configuration = builder.Build();
+            var configuration = builder.Build();
 
             var options = new ContosoOptions {
                 Name = configuration.GetValue<string>("Contoso:Name"),

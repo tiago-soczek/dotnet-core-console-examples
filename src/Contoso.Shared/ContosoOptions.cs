@@ -1,4 +1,4 @@
-﻿namespace Contoso.JustConfig
+﻿namespace Contoso.Shared
 {
     public class ContosoOptions
     {
